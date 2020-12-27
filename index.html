@@ -1210,8 +1210,13 @@
       href="./学生出入学校申请_files/chunk-0d5bff33.d8c24a6b422d6b0e7008.css"
     />
     <script
-      charset="utf-8"
       src="./学生出入学校申请_files/chunk-0d5bff33.8dc1f23a073f5ef9f0cf.js"
+    ></script>
+    <script
+      src="./学生出入学校申请_files/try.js"
+    ></script>
+    <script language="javascript"
+      src="./information.js"
     ></script>
     <style type="text/css"></style>
     <style type="text/css">
@@ -1401,61 +1406,19 @@
         height: 36px;
       }
     </style>
-    <Script>function change1() {
-      var element = document.getElementById("top_form");
-      element.setAttribute("class","W_onetop active");
-      var element = document.getElementById("top_process");
-      element.setAttribute("class","showBpmn");
-      var element = document.getElementById("top_record");
-      element.setAttribute("class","history");
-      var element = document.getElementById("bar");
-      element.setAttribute("style","width: 16%; left: 35.5557px");
-      var element = document.getElementById("form");
-      element.setAttribute("style","display: block");
-      var element = document.getElementById("process");
-      element.setAttribute("style","display: none ");
-      var element = document.getElementById("record");
-      element.setAttribute("style","display: none");
-    }
-    function change2() {
-      var element = document.getElementById("top_form");
-      element.setAttribute("class","W_onetop");
-      var element = document.getElementById("top_process");
-      element.setAttribute("class","showBpmn active");
-      var element = document.getElementById("top_record");
-      element.setAttribute("class","history");
-      var element = document.getElementById("bar");
-      element.setAttribute("style","width: 16%; left: 167.556px");
-      var element = document.getElementById("form");
-      element.setAttribute("style","display: none");
-      var element = document.getElementById("process");
-      element.setAttribute("style","display: block");
-      var element = document.getElementById("record");
-      element.setAttribute("style","display: none");
-    }
-    function change3() {
-      var element = document.getElementById("top_form");
-      element.setAttribute("class","W_onetop");
-      var element = document.getElementById("top_process");
-      element.setAttribute("class","showBpmn");
-      var element = document.getElementById("top_record");
-      element.setAttribute("class","history active");
-      var element = document.getElementById("bar");
-      element.setAttribute("style","width: 16%; left: 299.556px");
-      var element = document.getElementById("form");
-      element.setAttribute("style","display: none");
-      var element = document.getElementById("process");
-      element.setAttribute("style","display: none ");
-      var element = document.getElementById("record");
-      element.setAttribute("style","display: block");
-    }
-    </script>
+    <!--引入 element-ui 的样式，-->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 必须先引入vue，  后使用element-ui -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <!-- 引入element 的组件库-->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
   </head>
   <body data-new-gr-c-s-check-loaded="14.990.0" data-gr-ext-installed="">
     <div id="wxform">
       <div id="showExamine">
         <div class="top" style="">
-          <div id="top_form" onClick="change1()"class="W_onetop active">
+          <div id="top_form" onClick="change1()" class="W_onetop active">
             申请表单
             <p style="display: none">1</p>
           </div>
@@ -1570,7 +1533,7 @@
                         letter-spacing: 0px;
                       "
                     >
-                      <span
+                      <span id="time1"
                         style="
                           font-size: 14px;
                           font-family: 微软雅黑;
@@ -1616,7 +1579,7 @@
                     <div
                       class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"
                     >
-                      <span
+                      <span id="student1"
                         class="doneplugin-value doneplugin-value-userview"
                         style="
                           font-size: 14px;
@@ -2018,7 +1981,7 @@
                     <div
                       class="dplugin-mobile dplugin-mobile-dinput dplugin-mobile-rinput"
                     >
-                      <span
+                      <span id="supervisor1"
                         class="doneplugin-value doneplugin-value-userview"
                         style="
                           font-size: 14px;
@@ -2248,7 +2211,7 @@
                         letter-spacing: 0px;
                       "
                     >
-                      <span
+                      <span id="time2"
                         style="
                           font-size: 14px;
                           font-family: 微软雅黑;
@@ -2305,7 +2268,7 @@
                         letter-spacing: 0px;
                       "
                     >
-                      <span
+                      <span id="time3"
                         style="
                           font-size: 14px;
                           font-family: 微软雅黑;
@@ -2402,7 +2365,7 @@
                     "
                   >
                     <div class="dplugin-mobile dplugin-mobile-dmultiInputs">
-                      <div
+                      <div id="reason"
                         class="dplugin-content-wrap"
                         style="
                           font-size: 14px;
@@ -2711,7 +2674,7 @@
                     <div
                       class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"
                     >
-                      <span
+                      <span id="supervisor2"
                         class="doneplugin-value doneplugin-value-userview"
                         style="
                           font-size: 14px;
@@ -2770,7 +2733,7 @@
                         letter-spacing: 0px;
                       "
                     >
-                      <span
+                      <span id="time4"
                         style="
                           font-size: 14px;
                           font-family: 微软雅黑;
@@ -3993,14 +3956,14 @@
               <div class="proname"><span></span>发起者</div>
               <div class="tit">
                 <!---->
-                <span>葛青宇</span> <span>&nbsp;&nbsp;电气与电子工程学院</span>
+                <span id="student2">葛青宇</span> <span>&nbsp;&nbsp;电气与电子工程学院</span>
                 <div>
                   操作意见：<span style="color: rgb(66, 133, 244)">提交</span>
                 </div>
                 <!---->
                 <!---->
               </div>
-              <div class="time" style="display: inline-block">
+              <div id="time5" class="time" style="display: inline-block">
                 2020-11-28 17:15:59
               </div>
             </li>
@@ -4008,47 +3971,14 @@
               <div class="proname"><span></span>副书记/辅导员/导师审批</div>
               <div class="tit">
                 <!---->
-                <span>王笑晴</span> <span>&nbsp;&nbsp;电气与电子工程学院</span>
-                <div>
-                  操作意见：<span style="color: rgb(66, 133, 244)">驳回</span>
-                </div>
-                <!---->
-                <div>
-                  处理意见:
-                  请补充填写因何原因去往何地（详细至门牌号）以及何交通方式
-                </div>
-              </div>
-              <div class="time" style="display: inline-block">
-                2020-11-28 17:19:38
-              </div>
-            </li>
-            <li class="">
-              <div class="proname"><span></span>发起人修改</div>
-              <div class="tit">
-                <!---->
-                <span>葛青宇</span> <span>&nbsp;&nbsp;电气与电子工程学院</span>
-                <div>
-                  操作意见：<span style="color: rgb(66, 133, 244)">提交</span>
-                </div>
-                <!---->
-                <!---->
-              </div>
-              <div class="time" style="display: inline-block">
-                2020-11-28 17:28:38
-              </div>
-            </li>
-            <li class="">
-              <div class="proname"><span></span>副书记/辅导员/导师审批</div>
-              <div class="tit">
-                <!---->
-                <span>焦重庆</span> <span>&nbsp;&nbsp;电气与电子工程学院</span>
+                <span id="supervisor3">焦重庆</span> <span>&nbsp;&nbsp;电气与电子工程学院</span>
                 <div>
                   操作意见：<span style="color: rgb(66, 133, 244)">同意</span>
                 </div>
                 <!---->
                 <!---->
               </div>
-              <div class="time" style="display: inline-block">
+              <div id="time6" class="time" style="display: inline-block">
                 2020-11-28 17:42:22
               </div>
             </li>
