@@ -90,10 +90,10 @@ function movement(e) {
         var dx = String(x);
     var dy = String(y); */
 
-    /* console.log(e); */
-    if (dbclick_preview_flag == -1) {
-        document.getElementById("m_preview").setAttribute("style", "transform-origin: 0% 0%;position: absolute;transform: scale(1.5224, 1.5224) translate(" + String(e.clientX * 0.01) + "px, " + String(e.clientY * 0.01) + "px);");
-    }
+    console.log(e);
+/*     if (dbclick_preview_flag == -1) {
+        document.getElementById("m_preview").setAttribute("style", "transform-origin: 0% 0%;position: absolute;transform: scale(1.5224, 1.5224) translate(" + "px-100%, " + String(0) + "px-100%);");
+    } */
 }
 
 //不要在test后面加()因为这是在给事件关联触发的方法
