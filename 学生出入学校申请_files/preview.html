@@ -1177,7 +1177,6 @@
     <div id="preview_container"
       class="pinch-zoom-container"
       ondblclick="zoom_preview()"
-      onmousemove="movement()"
       style="
         overflow: hidden scroll;
         position: relative;
@@ -1187,6 +1186,7 @@
     >
       <div
         id="m_preview"
+        onmousemove="movement()"
         style="
           transform-origin: 0% 0%;
           position: absolute;
