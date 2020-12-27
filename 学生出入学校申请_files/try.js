@@ -75,7 +75,7 @@ function zoom_preview(e) {
     console.log(x,y)
     alert("坐标获取车公共") */
     if (dbclick_preview_flag == 1) {
-        document.getElementById("preview_container").setAttribute("style", "transform-origin: 0% 0%;position: relative; transform: scale(2.0224, 2.0224) translate(-25%, 0);");
+        document.getElementById("preview_container").setAttribute("style", "transform-origin: 0% 0%;position: relative; transform: scale(2.0224, 2.0224) translate(0, 0);");
 		/* document.getElementById("m_preview").setAttribute("style", "transform-origin: 0% 0%;position: relative; transform: scale(2.0224, 2.0224) translate(-25%, 0);"); */
         dbclick_preview_flag = -1;
     } else {
