@@ -52,6 +52,7 @@ function change1() {
       element.setAttribute("style","display: block");
     }
 var dbclick_preview_flag=1;
+var x=0,y=0;
 function zoom_preview(e) {
 /* 	e = e || window.event;//获取事件对象
 	alert("事件获取成功")
@@ -62,12 +63,27 @@ function zoom_preview(e) {
 	console.log(x,y)
 	alert("坐标获取车公共") */
 	if (dbclick_preview_flag==1) {
-		document.getElementById("m_preview").setAttribute("style","transform-origin: 0% 0%;position: absolute;transform: scale(2.0224, 2.0224) translate(250, 25);");
+		document.getElementById("m_preview").setAttribute("style","transform-origin: 0% 0%;position: absolute;transform: scale(2.0224, 2.0224) translate(0, 0);");
 		dbclick_preview_flag=dbclick_preview_flag*-1;
 	}
 	else {
 		document.getElementById("m_preview").setAttribute("style","transform-origin: 0% 0%;position: absolute;transform: scale(1.0112, 1.0112) translate(0px, 0px);");
 		dbclick_preview_flag=dbclick_preview_flag*-1;
+		x=0;
+		y=0;
+	}
+}
+
+function movement(e) {
+	e = e || window.event;//获取事件对象
+	x=x+e.clientX*-1
+	y=y+e.clientY*-1
+	var dx=String(x);
+	var dy=String(y);
+
+	console.log(e.movementX,e.movementY,dx,dy);
+	if (dbclick_preview_flag==-1) {
+	document.getElementById("m_preview").setAttribute("style","transform-origin: 0% 0%;position: absolute;transform: scale(2.0224, 2.0224) translate("+String(e.clientX*-1)+"px, "+String(e.clientY*-1)+"px);");
 	}
 }
 
