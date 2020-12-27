@@ -92,7 +92,7 @@ function movement(e) {
 
     /* console.log(e); */
     if (dbclick_preview_flag == -1) {
-        document.getElementById("m_preview").setAttribute("style", "transform-origin: 0% 0%;position: absolute;transform: scale(2.0224, 2.0224) translate(" + String(e.clientX * -1) + "px, " + String(e.clientY * -1) + "px);");
+        document.getElementById("m_preview").setAttribute("style", "transform-origin: 0% 0%;position: absolute;transform: scale(1.5224, 1.5224) translate(" + String(e.clientX * -0.1) + "px, " + String(e.clientY * -0.1) + "px);");
     }
 }
 
