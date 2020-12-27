@@ -1,12 +1,16 @@
 window.onload = function get_information() {
-    var time1,
-    time2,
-    time3;
-    var student,
-    supervisor;
-    time1 = "2020-12-27"; //填表时间
-    time2 = "2020-12-28 08:00"; //计划出校时间
-    time3 = "2020-12-31 22:01"; //计划入校时间
+	var now = new Date();
+	var before = new Date(now.getTime()-1*24*60*60*1000);//第一个1表示1天
+	var future = new Date(now.getTime()+1*24*60*60*1000);
+    var today = now.getFullYear()+"-" + (now.getMonth()+1) + "-" + now.getDate();
+    var yesterday = before.getFullYear()+"-" + (before.getMonth()+1) + "-" + before.getDate();
+	var tomorrow = future.getFullYear()+"-" + (future.getMonth()+1) + "-" + future.getDate();
+
+    var time1=yesterday;
+    var time2=today+" 07:00"; //计划出校时间
+    var time3=tomorrow+" 22:01"; //计划入校时间;
+    var student,    supervisor;
+
     student = "葛青宇";
     supervisor = "焦重庆";
     reason = "亲属来京探望，住在北京龙城温德姆酒店，外出会面。";
