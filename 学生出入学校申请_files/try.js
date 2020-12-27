@@ -67,7 +67,7 @@ function zoom_preview(e) {
 		dbclick_preview_flag=dbclick_preview_flag*-1;
 	}
 	else {
-		document.getElementById("m_preview").setAttribute("style","transform-origin: 0% 0%;position: absolute;transform: scale(1.0112, 1.0112) translate(0px, 0px);");
+		document.getElementById("m_preview").setAttribute("style","transform-origin: 0% 0%;position: absolute;transform: scale(1.0112, 1.0112) translate(-25%, -25%);");
 		dbclick_preview_flag=dbclick_preview_flag*-1;
 		x=0;
 		y=0;
