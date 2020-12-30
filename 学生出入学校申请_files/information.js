@@ -13,7 +13,7 @@ window.onload = function get_information() {
 
     student = "葛青宇";
     supervisor = "焦重庆";
-    reason = "亲属来京探望，住在北京龙城温德姆酒店，外出会面。";
+    reason = "在京居住，回家，住址回龙观金榜园10-2-401。";
     /* 		alert("赋值") */
     document.getElementById("time1").innerHTML = time1;
     document.getElementById("time2").innerHTML = time2;
